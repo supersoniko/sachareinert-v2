@@ -1,0 +1,35 @@
+// Zed settings for Cyclis
+// Install eslint_d globally with `npm install -g eslint_d`
+// Might make this a local node_module if wider adoption of zed is used in project
+{
+  "language_overrides": {
+    "TypeScript": {
+      "format_on_save": {
+        "external": {
+          "command": "eslint_d",
+          "arguments": [
+            "--stdin",
+            "--fix",
+            "--fix-to-stdout",
+            "--stdin-filename",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "TSX": {
+      "format_on_save": {
+        "external": {
+          "command": "eslint_d",
+          "arguments": [
+            "--stdin",
+            "--fix",
+            "--fix-to-stdout",
+            "--stdin-filename",
+            "{buffer_path}"
+          ]
+        }
+      }
+    }
+  }
+}
