@@ -1,0 +1,40 @@
+@use "sass:math";
+@use "sass:string";
+
+body {
+  height: 100vh;
+  font-size: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  $text: "Hover me!";
+  $tokens: "ABCDEFGHIJKLMNOPQRSTUVWXYZabdcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+-=[]|;:?/<,.>";
+
+  &::before {
+    content: $text;
+  }
+
+  &:hover::before {
+    animation: 1s linear text-effect;
+  }
+
+  @keyframes text-effect {
+    $frames: 10;
+
+    @for $i from 0 to $frames {
+      $percent: ($i / $frames) * 100%;
+
+      #{$percent} {
+        $content: "";
+
+        @for $i from 0 to string.length($text) {
+          $tokenIndex: math.random(string.length($tokens));
+          $content: $content + string.slice($tokens, $tokenIndex, $tokenIndex);
+        }
+
+        content: $content;
+      }
+    }
+  }
+}

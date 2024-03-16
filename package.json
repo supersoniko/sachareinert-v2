@@ -21,6 +21,7 @@
     "postprocessing": "^6.35.2",
     "react": "^18",
     "react-dom": "^18",
+    "sass": "^1.72.0",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7"
   },

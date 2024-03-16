@@ -18,7 +18,7 @@ export const HeroSection = () => {
     <div className="flex justify-between">
       <h1 className="max-w-[50%] text-8xl">
         Developing digital solutions with a focus on{" "}
-        <span className="lightning-text">backend</span>
+        <span className="lightning-text">backend</span>.
       </h1>
       <Card className="w-[40%]">
         <CardContent className="p-0">
