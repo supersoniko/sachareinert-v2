@@ -7,7 +7,7 @@ export default function LandingLayout({
 }>) {
   return (
     <CubeCloudCanvasWrapper>
-      <main className="px-24 py-12">{children}</main>
+      <main className="py-12 pl-12">{children}</main>
     </CubeCloudCanvasWrapper>
   );
 }
