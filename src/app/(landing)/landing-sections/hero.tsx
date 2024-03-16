@@ -1,7 +1,10 @@
 export const HeroSection = () => {
   return (
     <div className="flex justify-between">
-      <span className="text-8xl">Hero Text.</span>
+      <h1 className="max-w-[50%] text-8xl">
+        Developing digital solutions with a focus on{" "}
+        <span className="lightning-text">backend</span>
+      </h1>
       <span>Hero Image</span>
     </div>
   );
