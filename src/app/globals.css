@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body,
-#root {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
+@layer base {
+  body {
+    @apply bg-[#111111] text-white;
+  }
 }
