@@ -1,9 +1,10 @@
 import { CubeCloudCanvasWrapper } from "./components/cube-cloud-canvas";
+import { HeroSection } from "./landing-sections/hero";
 
 export default function Home() {
   return (
     <CubeCloudCanvasWrapper>
-      <span className="text-9xl">Hello</span>
+      <HeroSection />
     </CubeCloudCanvasWrapper>
   );
 }
