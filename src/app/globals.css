@@ -39,7 +39,7 @@
 
 @layer components {
   .lightning-text {
-    filter: drop-shadow(rgba(255, 255, 255, 0.7) 0px 0px 3px)
-      drop-shadow(rgba(255, 255, 255) 0px 0px 15px);
+    filter: drop-shadow(hsl(var(--accent-colorful)) 0px 0px 3px)
+      drop-shadow(hsl(var(--accent-colorful)) 0px 0px 15px);
   }
 }
