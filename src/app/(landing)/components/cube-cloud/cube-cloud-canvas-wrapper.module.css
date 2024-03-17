@@ -1,7 +1,3 @@
-.parent {
-  display: grid;
-}
-
-.child {
+.gridChild {
   grid-area: 1 / 1 / 2 / 2;
 }

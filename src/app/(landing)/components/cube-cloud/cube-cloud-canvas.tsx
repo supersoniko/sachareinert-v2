@@ -14,9 +14,9 @@ export function CubeCloudCanvasWrapper({
   children: React.ReactNode;
 }) {
   return (
-    <div className={cn("h-screen", styles.parent)}>
+    <div className="grid">
       <Canvas
-        className={cn("-z-40 h-full", styles.child)}
+        className={cn("-z-40", styles.gridChild)}
         gl={{ antialias: false, alpha: false }}
       >
         <color args={[0x111111]} attach="background" />
@@ -46,7 +46,7 @@ export function CubeCloudCanvasWrapper({
           />
         </EffectComposer>
       </Canvas>
-      <div className={styles.child}>{children}</div>
+      <div className={styles.gridChild}>{children}</div>
     </div>
   );
 }
