@@ -1,13 +1,10 @@
 import Image from "next/image";
 import { SectionTitle } from "@/app/(landing)/components/section-title/section-title";
+import { SectionLayout } from "@/app/(landing)/components/section-layout/section-layout";
 
 export const PetProjectSection = () => {
   return (
-    <section
-      id="pet-project"
-      aria-labelledby="pet-projects-heading"
-      className="flex pl-12"
-    >
+    <SectionLayout id="pet-project" aria-labelledby="pet-projects-heading">
       <SectionTitle id="pet-projects-heading">Pet Project</SectionTitle>
       <div>
         <p className="text-8xl">TO DO</p>
@@ -19,6 +16,6 @@ export const PetProjectSection = () => {
           className="ml-auto mr-auto block"
         />
       </div>
-    </section>
+    </SectionLayout>
   );
 };

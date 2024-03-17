@@ -1,13 +1,10 @@
 import Image from "next/image";
 import { SectionTitle } from "@/app/(landing)/components/section-title/section-title";
+import { SectionLayout } from "@/app/(landing)/components/section-layout/section-layout";
 
 export const ContactSection = () => {
   return (
-    <section
-      id="contact"
-      aria-labelledby="contact-heading"
-      className="flex pl-12"
-    >
+    <SectionLayout id="contact" aria-labelledby="contact-heading">
       <SectionTitle id="contact-heading">Contact</SectionTitle>
       <div>
         <p className="text-8xl">TO DO</p>
@@ -19,6 +16,6 @@ export const ContactSection = () => {
           className="ml-auto mr-auto block"
         />
       </div>
-    </section>
+    </SectionLayout>
   );
 };
