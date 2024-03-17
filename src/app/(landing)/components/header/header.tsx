@@ -18,7 +18,7 @@ const links = [
 
 export const Header = () => {
   return (
-    <div className="flex items-center justify-between border-b bg-card pl-12">
+    <div className="fixed flex w-full items-center justify-between border-b bg-card/50 pl-12 backdrop-blur-lg">
       <div>
         <span className="text-4xl font-semibold">Sacha </span>
         <span className="text-4xl">Reinert</span>
