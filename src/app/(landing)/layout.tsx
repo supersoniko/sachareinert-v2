@@ -1,4 +1,4 @@
-import { CubeCloudCanvasWrapper } from "./components/cube-cloud-canvas";
+import { CubeCloudCanvasWrapper } from "./components/cube-cloud/cube-cloud-canvas";
 
 export default function LandingLayout({
   children,

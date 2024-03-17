@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix"
+    "lint": "eslint_d \"src/**/*.{ts,tsx}\"",
+    "lint:fix": "eslint_d --fix \"src/**/*.{ts,tsx}\""
   },
   "dependencies": {
     "@react-three/drei": "^9.102.5",
