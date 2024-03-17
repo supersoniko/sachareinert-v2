@@ -15,8 +15,14 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export const HeroSection = () => {
   return (
-    <div className="flex justify-between">
-      <h1 className="max-w-[50vw] pl-12 pt-4 text-8xl">
+    <section
+      aria-labelledby="introduction-heading"
+      className="flex justify-between"
+    >
+      <h1
+        id="introduction-heading"
+        className="max-w-[50vw] pl-12 pt-4 text-8xl"
+      >
         Developing digital solutions with a focus on{" "}
         <span className="lightning-text">backend</span>.
       </h1>
@@ -48,6 +54,6 @@ export const HeroSection = () => {
           </div>
         </CardContent>
       </Card>
-    </div>
+    </section>
   );
 };

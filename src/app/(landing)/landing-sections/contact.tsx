@@ -1,14 +1,14 @@
 import Image from "next/image";
 import { SectionTitle } from "@/app/(landing)/components/section-title/section-title";
 
-export const PetProjectSection = () => {
+export const ContactSection = () => {
   return (
     <section
-      id="pet-project"
-      aria-labelledby="pet-projects-heading"
+      id="contact"
+      aria-labelledby="contact-heading"
       className="flex pl-12"
     >
-      <SectionTitle id="pet-projects-heading">Pet Project</SectionTitle>
+      <SectionTitle id="contact-heading">Contact</SectionTitle>
       <div>
         <p className="text-8xl">TO DO</p>
         <Image

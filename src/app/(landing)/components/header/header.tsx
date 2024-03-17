@@ -8,7 +8,7 @@ const links = [
   },
   {
     label: "Contributions",
-    href: "#oss-contributons",
+    href: "#contributions",
   },
   {
     label: "Contact",
