@@ -18,12 +18,12 @@ const links = [
 
 export const Header = () => {
   return (
-    <div className="fixed flex w-full items-center justify-between border-b bg-card/50 pl-12 backdrop-blur-lg">
+    <div className="fixed flex w-full items-center justify-between border-b bg-card/50 pl-4 backdrop-blur-lg md:pl-12">
       <div>
-        <span className="text-4xl font-semibold">Sacha </span>
-        <span className="text-4xl">Reinert</span>
+        <span className="text-lg font-semibold md:text-4xl">Sacha </span>
+        <span className="text-lg md:text-4xl">Reinert</span>
       </div>
-      <nav className="flex space-x-4">
+      <nav className="hidden space-x-4 md:flex">
         {links.map((link) => (
           <Link
             className="flex h-16 w-36 items-center justify-center border-l-2"
@@ -34,6 +34,12 @@ export const Header = () => {
           </Link>
         ))}
       </nav>
+      <Link
+        className="flex h-16  w-36 items-center justify-center border-l-2 md:hidden"
+        href="#contact"
+      >
+        <LetterEffectText text="Contact" />
+      </Link>
     </div>
   );
 };

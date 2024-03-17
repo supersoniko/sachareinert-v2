@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="flex flex-col space-y-48 pt-16">
+      <div className="flex flex-col space-y-28 pt-16 md:space-y-48">
         <HeroSection />
         <PetProjectSection />
         <ContributionsSection />
