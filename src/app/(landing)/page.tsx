@@ -1,3 +1,4 @@
+import { Footer } from "./components/footer/footer";
 import { Header } from "./components/header/header";
 import { ContactSection } from "./landing-sections/contact";
 import { ContributionsSection } from "./landing-sections/contributions";
@@ -14,6 +15,7 @@ export default function Home() {
         <ContributionsSection />
         <ContactSection />
       </div>
+      <Footer />
     </>
   );
 }
