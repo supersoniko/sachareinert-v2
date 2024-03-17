@@ -4,6 +4,9 @@ import { Canvas } from "@react-three/fiber";
 import { Stars } from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import { CubeCloud } from "./cube-cloud";
+import { cn } from "@/lib/utils";
+
+import styles from "./cube-cloud-canvas-wrapper.module.css";
 
 export function CubeCloudCanvasWrapper({
   children,
@@ -11,9 +14,9 @@ export function CubeCloudCanvasWrapper({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className={cn("h-screen", styles.parent)}>
       <Canvas
-        className="h-ful absolute left-0 top-0 w-full"
+        className={cn("-z-40 h-full", styles.child)}
         gl={{ antialias: false, alpha: false }}
       >
         <color args={[0x111111]} attach="background" />
@@ -43,7 +46,7 @@ export function CubeCloudCanvasWrapper({
           />
         </EffectComposer>
       </Canvas>
-      <div className="absolute left-0 top-0 z-10 h-full w-full">{children}</div>
+      <div className={styles.child}>{children}</div>
     </div>
   );
 }
