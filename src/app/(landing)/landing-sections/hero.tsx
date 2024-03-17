@@ -1,4 +1,4 @@
-import Image from "next/image";
+"use client";
 
 import {
   IconBrandReact,
@@ -12,6 +12,10 @@ import {
 } from "@tabler/icons-react";
 
 import { Card, CardContent } from "@/components/ui/card";
+import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
+import { Model } from "./model";
+import { Environment, Float } from "@react-three/drei";
 
 export const HeroSection = () => {
   return (
@@ -29,13 +33,33 @@ export const HeroSection = () => {
       </h1>
       <Card className="border-t-0 md:w-[40vw]">
         <CardContent className="p-0">
-          <Image
+          {/* <Image
             src="/images/smug-tighnari-2-transparent.png"
             alt="Hero image"
             width={500}
             height={500}
             className="ml-auto mr-auto block"
-          />
+          /> */}
+          <div className="h-[500px]">
+            {/* <Canvas>
+              <Suspense fallback={null}>
+                <Model scale={[2.5, 2.5, 2.5]} />
+                <Environment preset="sunset" />
+              </Suspense>
+            </Canvas> */}
+            <Canvas>
+              <Suspense fallback={null}>
+                <Float
+                  scale={0.75}
+                  // position={[0, 0.65, 0]}
+                  // rotation={[0, 0.6, 0]}
+                >
+                  <Model scale={[3.2, 4, 1]} />
+                </Float>
+                <Environment preset="sunset" />
+              </Suspense>
+            </Canvas>
+          </div>
           <div className="h-full border-t bg-zinc-900 p-4">
             <h3 className="pb-2 text-lg font-semibold">Experience</h3>
             <div className="grid grid-cols-4 items-center justify-items-center gap-4">
