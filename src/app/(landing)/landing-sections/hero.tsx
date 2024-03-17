@@ -37,7 +37,7 @@ export const HeroSection = () => {
             className="ml-auto mr-auto block"
           />
           <div className="h-full border-t bg-zinc-900 p-4">
-            <h3 className="pb-2 text-lg font-bold">Experience</h3>
+            <h3 className="pb-2 text-lg font-semibold">Experience</h3>
             <div className="grid grid-cols-4 items-center justify-items-center gap-4">
               <IconBrandGolang role="presentation" size={48} stroke={1.25} />
               <IconBrandTypescript
