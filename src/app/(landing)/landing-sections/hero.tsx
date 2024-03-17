@@ -15,7 +15,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { Model } from "./model";
-import { Environment, Float } from "@react-three/drei";
+import { Center, Environment, Float } from "@react-three/drei";
+import { Bloom, EffectComposer } from "@react-three/postprocessing";
 
 export const HeroSection = () => {
   return (
@@ -40,7 +41,7 @@ export const HeroSection = () => {
             height={500}
             className="ml-auto mr-auto block"
           /> */}
-          <div className="h-[500px]">
+          <div className="h-[700px]">
             {/* <Canvas>
               <Suspense fallback={null}>
                 <Model scale={[2.5, 2.5, 2.5]} />
@@ -49,14 +50,25 @@ export const HeroSection = () => {
             </Canvas> */}
             <Canvas>
               <Suspense fallback={null}>
-                <Float
-                  scale={0.75}
-                  // position={[0, 0.65, 0]}
-                  // rotation={[0, 0.6, 0]}
-                >
-                  <Model scale={[3.2, 4, 1]} />
-                </Float>
+                <Center>
+                  <Float
+                    scale={0.75}
+                    // position={[0, 0.65, 0]}
+                    // rotation={[0, 0.6, 0]}
+                  >
+                    <Model scale={[2.5, 4, 1]} />
+                  </Float>
+                </Center>
                 <Environment preset="sunset" />
+                <EffectComposer>
+                  <Bloom
+                    luminanceThreshold={0.1} // Adjusts the brightness threshold for the bloom
+                    luminanceSmoothing={1.0} // Smooths the transition between un-bloomed and bloomed areas
+                    intensity={10} // The overall intensity of the bloom effect
+                    // You can experiment with other props to customize the effect further
+                  />
+                  {/* You can add more post-processing effects here */}
+                </EffectComposer>
               </Suspense>
             </Canvas>
           </div>
