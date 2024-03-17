@@ -19,10 +19,10 @@ const links = [
 export const Header = () => {
   return (
     <div className="fixed flex w-full items-center justify-between border-b bg-card/50 pl-4 backdrop-blur-lg md:pl-12">
-      <div>
+      <Link href="#hero">
         <span className="text-lg font-semibold md:text-4xl">Sacha </span>
         <span className="text-lg md:text-4xl">Reinert</span>
-      </div>
+      </Link>
       <nav className="hidden space-x-4 md:flex">
         {links.map((link) => (
           <Link

@@ -16,8 +16,9 @@ import { Card, CardContent } from "@/components/ui/card";
 export const HeroSection = () => {
   return (
     <section
+      id="hero"
       aria-labelledby="introduction-heading"
-      className="flex flex-col space-y-8 md:flex-row md:justify-between md:space-y-0"
+      className="flex scroll-mt-16 flex-col space-y-8 md:flex-row md:justify-between md:space-y-0"
     >
       <h1
         id="introduction-heading"
