@@ -12,13 +12,20 @@ import {
 } from "@tabler/icons-react";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
+import { Canvas, Vector3 } from "@react-three/fiber";
+import { Suspense, useEffect, useState } from "react";
 import { Model } from "./model";
 import { Environment, Float } from "@react-three/drei";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 
 export const HeroSection = () => {
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const modelScale: Vector3 = isMobile ? [1.2, 2, 1] : [1.8, 3, 1];
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []); // Empty array ensures this effect runs only on mount and unmount
+
   return (
     <section
       id="hero"
@@ -55,7 +62,7 @@ export const HeroSection = () => {
                 // position={[0, 0.65, 0]}
                 // rotation={[0, 0.6, 0]}
                 >
-                  <Model scale={[1.8, 3, 1]} />
+                  <Model scale={modelScale} />
                 </Float>
                 <Environment preset="sunset" />
                 <EffectComposer>
