@@ -13,9 +13,9 @@ import {
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Vector3 } from "@react-three/fiber";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Model } from "./model";
-import { Environment, View } from "@react-three/drei";
+import { Environment, Float, View } from "@react-three/drei";
 
 export const HeroSection = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -38,12 +38,20 @@ export const HeroSection = () => {
         Developing digital solutions with a focus on{" "}
         <span className="lightning-text">backend</span>.
       </h1>
-      <Card className="border-t-0 md:w-[40vw]">
+      <Card className="border-t-0 bg-card/10 md:w-[40vw]">
         <CardContent className="p-0">
-          <div className="h-[500px] 2xl:h-[700px]">
-            <View index={2} className="z-40 h-[500px] w-[500px]">
-              <Model scale={modelScale} />
-              <Environment preset="sunset" />
+          <div className="h-[500px]  2xl:h-[700px]">
+            <View index={2} className="2xl:h-[700px]]  h-[500px]">
+              <Suspense fallback={null}>
+                <Float
+                // scale={0.75}
+                // position={[0, 0.65, 0]}
+                // rotation={[0, 0.6, 0]}
+                >
+                  <Model scale={modelScale} />
+                </Float>
+                <Environment preset="sunset" />
+              </Suspense>
             </View>
           </div>
           <div className="h-full border-t bg-zinc-900 p-4">
