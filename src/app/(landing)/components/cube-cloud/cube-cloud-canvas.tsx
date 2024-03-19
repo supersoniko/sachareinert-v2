@@ -14,8 +14,8 @@ export function CubeCloudCanvasWrapper({
   children: React.ReactNode;
 }) {
   return (
-    <div className="grid h-full min-h-screen">
-      <View index={1} className={cn(styles.gridChild)}>
+    <div className="grid">
+      <View index={1} className={cn(styles.gridChild, "")}>
         <color args={[0x111111]} attach="background" />
         <ambientLight intensity={Math.PI} />
         <Stars
