@@ -44,7 +44,7 @@ export function CubeCloudCanvasWrapper({
         </EffectComposer>
       </View>
 
-      <Canvas className={cn("", styles.gridChild)}>
+      <Canvas resize={{ scroll: false }} className={cn("", styles.gridChild)}>
         <View.Port />
       </Canvas>
       <div className={cn("z-10", styles.gridChild)}>{children}</div>
