@@ -15,7 +15,17 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Canvas, Vector3 } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
 import { Model } from "./model";
-import { Environment, Float } from "@react-three/drei";
+import {
+  Bounds,
+  ContactShadows,
+  Environment,
+  Float,
+  OrbitControls,
+  PivotControls,
+  View,
+  useGLTF,
+  OrthographicCamera,
+} from "@react-three/drei";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 
 export const HeroSection = () => {
@@ -55,27 +65,44 @@ export const HeroSection = () => {
                 <Environment preset="sunset" />
               </Suspense>
             </Canvas> */}
-            <Canvas>
-              <Suspense fallback={null}>
-                <Float
-                // scale={0.75}
-                // position={[0, 0.65, 0]}
-                // rotation={[0, 0.6, 0]}
-                >
-                  <Model scale={modelScale} />
-                </Float>
-                <Environment preset="sunset" />
-                <EffectComposer>
-                  <Bloom
-                    luminanceThreshold={0.1} // Adjusts the brightness threshold for the bloom
-                    luminanceSmoothing={1.0} // Smooths the transition between un-bloomed and bloomed areas
-                    intensity={10} // The overall intensity of the bloom effect
-                    // You can experiment with other props to customize the effect further
-                  />
-                  {/* You can add more post-processing effects here */}
-                </EffectComposer>
-              </Suspense>
-            </Canvas>
+            <View index={2} className="h-[500px] w-[500px]">
+              <Model scale={[2.5, 2.5, 2.5]} />
+              <Environment preset="sunset" />
+            </View>
+            {/* <View index={2} className="view2 z-30">
+              <color attach="background" args={["#d6edf3"]} />
+              <OrthographicCamera makeDefault position={[0, 0, 5]} zoom={80} />
+              <Lights />
+              <OrbitControls makeDefault />
+              <PivotControls depthTest={false}>
+                <Bounds fit clip observe margin={1.5}>
+                  <Target />
+                </Bounds>
+                <ContactShadows
+                  frames={1}
+                  position={[0, -1, 0]}
+                  blur={1}
+                  opacity={0.6}
+                />
+              </PivotControls>
+            </View> */}
+            {/* <View index={2} className="view2">
+              <color attach="background" args={["#d6edf3"]} />
+              <OrthographicCamera makeDefault position={[0, 0, 5]} zoom={80} />
+              <Lights />
+              <OrbitControls makeDefault />
+              <PivotControls depthTest={false}>
+                <Bounds fit clip observe margin={1.5}>
+                  <Target />
+                </Bounds>
+                <ContactShadows
+                  frames={1}
+                  position={[0, -1, 0]}
+                  blur={1}
+                  opacity={0.6}
+                />
+              </PivotControls>
+            </View> */}
           </div>
           <div className="h-full border-t bg-zinc-900 p-4">
             <h3 className="pb-2 text-lg font-semibold">Experience</h3>
@@ -99,3 +126,42 @@ export const HeroSection = () => {
     </section>
   );
 };
+
+function Lights() {
+  return (
+    <>
+      <ambientLight intensity={1} />
+      <pointLight position={[20, 30, 10]} />
+      <pointLight position={[-10, -10, -10]} color="blue" />
+    </>
+  );
+}
+
+function Target(props) {
+  const { nodes, materials } = useGLTF(
+    "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/target-stand/model.gltf",
+  );
+  const [hovered, hover] = useState(false);
+  return (
+    <group position={[0, -1, 0]} {...props} dispose={null}>
+      <group
+        onPointerOver={() => hover(true)}
+        onPointerOut={() => hover(false)}
+        rotation={[Math.PI / 2, 0, 0]}
+      >
+        <mesh
+          geometry={nodes.Cylinder016.geometry}
+          material={materials["Red.025"]}
+        />
+        <mesh geometry={nodes.Cylinder016_1.geometry}>
+          <meshStandardMaterial color={hovered ? "orange" : "white"} />
+        </mesh>
+      </group>
+      <mesh
+        rotation={[Math.PI / 2, 0, 0]}
+        geometry={nodes.Cylinder016_2.geometry}
+        material={materials["BrownDark.018"]}
+      />
+    </group>
+  );
+}

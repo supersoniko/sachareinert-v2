@@ -43,3 +43,11 @@
       drop-shadow(hsl(var(--accent-colorful)) 0px 0px 15px);
   }
 }
+
+.view2 {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  width: calc(250px - 2em);
+  height: calc(250px - 2em);
+}
