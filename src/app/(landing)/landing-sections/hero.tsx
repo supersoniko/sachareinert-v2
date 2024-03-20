@@ -41,38 +41,19 @@ export const HeroSection = () => {
       </h1>
       <Card className="border-t-0 md:w-[40vw]">
         <CardContent className="p-0">
-          {/* <Image
-            src="/images/smug-tighnari-2-transparent.png"
-            alt="Hero image"
-            width={500}
-            height={500}
-            className="ml-auto mr-auto block"
-          /> */}
           <div className="h-[500px] 2xl:h-[700px]">
-            {/* <Canvas>
-              <Suspense fallback={null}>
-                <Model scale={[2.5, 2.5, 2.5]} />
-                <Environment preset="sunset" />
-              </Suspense>
-            </Canvas> */}
             <Canvas>
               <Suspense fallback={null}>
-                <Float
-                // scale={0.75}
-                // position={[0, 0.65, 0]}
-                // rotation={[0, 0.6, 0]}
-                >
+                <Float>
                   <Model scale={modelScale} />
                 </Float>
                 <Environment preset="sunset" />
                 <EffectComposer>
                   <Bloom
-                    luminanceThreshold={0.1} // Adjusts the brightness threshold for the bloom
-                    luminanceSmoothing={1.0} // Smooths the transition between un-bloomed and bloomed areas
-                    intensity={10} // The overall intensity of the bloom effect
-                    // You can experiment with other props to customize the effect further
+                    luminanceThreshold={0.1}
+                    luminanceSmoothing={1.0}
+                    intensity={10}
                   />
-                  {/* You can add more post-processing effects here */}
                 </EffectComposer>
               </Suspense>
             </Canvas>
