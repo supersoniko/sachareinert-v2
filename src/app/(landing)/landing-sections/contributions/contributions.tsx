@@ -12,7 +12,7 @@ const contributions = [
   {
     title: "AWS Secrets Dotenv",
     description: " Easily manage your environment variables on AWS with .env",
-   githubRepository: "supersoniko/aws-secrets-dotenv",
+    githubRepository: "supersoniko/aws-secrets-dotenv",
   },
   {
     title: "Hono API Starter",
