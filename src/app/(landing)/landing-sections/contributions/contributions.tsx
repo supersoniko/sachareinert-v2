@@ -7,18 +7,18 @@ const contributions = [
   {
     title: "DynamoDB Paginator",
     description: "A npm package to help paginate DynamoDB results into pages",
-    githubLink: "https://github.com/supersoniko/dynamodb-paginator",
+    githubRepository: "supersoniko/dynamodb-paginator",
   },
   {
     title: "AWS Secrets Dotenv",
     description: " Easily manage your environment variables on AWS with .env",
-    githubLink: "https://github.com/supersoniko/aws-secrets-dotenv",
+   githubRepository: "supersoniko/aws-secrets-dotenv",
   },
   {
     title: "Hono API Starter",
     description:
       "Modern DX friendly starter for Node.js/Hono APIs with the focus on simplicity and robustness",
-    githubLink: "https://github.com/supersoniko/hono-api-starter",
+    githubRepository: "supersoniko/hono-api-starter",
   },
 ];
 

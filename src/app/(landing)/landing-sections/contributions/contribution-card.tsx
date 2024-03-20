@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { Suspense } from "react";
+import { Github, Star } from "lucide-react";
 
 import {
   Card,
@@ -7,12 +9,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Github } from "lucide-react";
+import { GitHubStars } from "./github-stars";
 
 type Contribution = {
   title: string;
   description: string;
-  githubLink: string;
+  githubRepository: string;
 };
 
 type ContributionCardProps = { contribution: Contribution };
@@ -24,15 +26,21 @@ export const ContributionCard = ({ contribution }: ContributionCardProps) => {
         <CardTitle>{contribution.title}</CardTitle>
         <CardDescription>{contribution.description}</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex justify-between">
         <Link
           className="flex space-x-1"
           target="_blank"
-          href={contribution.githubLink}
+          href={`https://github.com/${contribution.githubRepository}`}
         >
           <Github />
           <span>GitHub</span>
         </Link>
+        <div className="flex space-x-1">
+          <Star />
+          <Suspense fallback={<span>...</span>}>
+            <GitHubStars githubRepository={contribution.githubRepository} />
+          </Suspense>
+        </div>
       </CardContent>
     </Card>
   );
