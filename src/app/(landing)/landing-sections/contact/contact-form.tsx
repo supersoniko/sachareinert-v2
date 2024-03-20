@@ -49,9 +49,9 @@ export const ContactForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 pr-4 md:pr-0"
+        className="space-y-6 pr-4 md:pr-0"
       >
-        <div className="flex flex-col md:flex-row md:space-x-8">
+        <div className="flex flex-col space-y-6 md:flex-row md:space-x-8 md:space-y-0">
           <FormField
             control={form.control}
             name="name"
