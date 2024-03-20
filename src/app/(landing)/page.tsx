@@ -1,7 +1,7 @@
 import { Footer } from "./components/footer/footer";
 import { Header } from "./components/header/header";
 import { ContactSection } from "./landing-sections/contact/contact";
-import { ContributionsSection } from "./landing-sections/contributions";
+import { ContributionsSection } from "./landing-sections/contributions/contributions";
 import { HeroSection } from "./landing-sections/hero";
 import { PetProjectSection } from "./landing-sections/pet-project";
 
