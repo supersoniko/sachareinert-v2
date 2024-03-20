@@ -41,17 +41,11 @@ export const HeroSection = () => {
       <Card className="border-t-0 bg-card/10 md:w-[40vw]">
         <CardContent className="p-0">
           <div className="h-[500px]  2xl:h-[700px]">
-            <View index={2} className="2xl:h-[700px]]  h-[500px]">
-              <Suspense fallback={null}>
-                <Float
-                // scale={0.75}
-                // position={[0, 0.65, 0]}
-                // rotation={[0, 0.6, 0]}
-                >
-                  <Model scale={modelScale} />
-                </Float>
-                <Environment preset="sunset" />
-              </Suspense>
+            <View frames={1} className="2xl:h-[700px]]  h-[500px]">
+              <Float>
+                <Model scale={modelScale} />
+              </Float>
+              <Environment preset="sunset" />
             </View>
           </div>
           <div className="h-full border-t bg-zinc-900 p-4">
