@@ -2,7 +2,7 @@
 
 import { useMemo } from "react";
 
-import styles from "./letter-effect-text.module.scss";
+import { cn } from "@/lib/utils";
 
 const defaultAlphabet =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabdcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+-=[]|;:?/<,.>"';
@@ -27,7 +27,15 @@ export const useRandomStrings = (count: number, length: number): string[] => {
   );
 };
 
-export const LetterEffectText = ({ text }: { text: string }) => {
+type LetterEffectTextProps = {
+  text: string;
+  className?: string;
+};
+
+export const LetterEffectText = ({
+  text,
+  className,
+}: LetterEffectTextProps) => {
   const randomStrings = useRandomStrings(10, text.length);
   const textAttr = { text };
   const frameAttr = useMemo(
@@ -42,5 +50,14 @@ export const LetterEffectText = ({ text }: { text: string }) => {
     [randomStrings],
   );
 
-  return <span className={styles.textEffect} {...textAttr} {...frameAttr} />;
+  return (
+    <span
+      className={cn(
+        "letter-effect-text hover:letter-effect-text-animate",
+        className,
+      )}
+      {...textAttr}
+      {...frameAttr}
+    />
+  );
 };
