@@ -20,7 +20,7 @@ export const PetProjectSection = () => {
       className="pr-4 md:pr-0"
     >
       <SectionTitle id="pet-projects-heading">Pet Project</SectionTitle>
-      <div className="flex flex-col justify-center rounded-lg bg-card/60 backdrop-blur-lg">
+      <div className="flex flex-col justify-center rounded-lg bg-card/70 backdrop-blur-lg">
         <Image
           src="/images/kfeed-project-hero.png"
           className="rounded-t-lg"
