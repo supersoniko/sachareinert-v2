@@ -24,7 +24,7 @@ export const PetProjectSection = () => {
           width={1077}
           height={672}
         />
-        <div className="pb- flex w-full flex-col items-start px-4 py-8">
+        <div className="pb- flex w-full flex-col items-start px-8 py-8">
           <div className="flex w-full justify-between pb-2">
             <h3 className="text-5xl font-bold">Kfeed</h3>
             <div className="flex space-x-4">
