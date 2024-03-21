@@ -96,7 +96,7 @@ export const ContactForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit">Send</Button>
+        <Button type="submit">Submit</Button>
       </form>
     </Form>
   );
