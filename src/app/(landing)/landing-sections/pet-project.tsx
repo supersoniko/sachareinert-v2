@@ -69,3 +69,5 @@ export const PetProjectSection = () => {
     </SectionLayout>
   );
 };
+
+export const dynamic = "force-static";
