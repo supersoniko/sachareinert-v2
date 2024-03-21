@@ -1,0 +1,78 @@
+@use "sass:math";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0, 0%, 7%;
+        --foreground: 0 0% 98%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+        --accent: 240 3.7% 15.9%;
+        --accent-foreground: 0 0% 98%;
+        --accent-colorful: 43.26 96.41% 56.27%;
+        --destructive: 0 72.22% 50.59%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 4.9% 83.9%;
+        --radius: 0.5rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+@layer components {
+    .lightning-text {
+        filter: drop-shadow(hsl(var(--accent-colorful)) 0px 0px 3px) drop-shadow(hsl(var(--accent-colorful)) 0px 0px 15px);
+    }
+
+    .letter-effect-text {
+        &::before {
+            content: attr(text);
+        }
+    }
+
+    .letter-effect-text-animate {
+        color: red;
+
+        &::before {
+            animation: 1s linear text-effect;
+            color: hsl(var(--accent-colorful));
+        }
+    }
+}
+
+
+@keyframes text-effect {
+    $frames: 10;
+
+    @for $i from 0 to $frames {
+        $percent: (
+            $i / $frames) * 100%;
+        $attr: frame#{$i};
+
+        #{$percent} {
+            content: attr($attr
+            );
+    }
+}
+}
