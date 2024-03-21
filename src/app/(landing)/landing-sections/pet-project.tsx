@@ -11,7 +11,6 @@ import {
 import { SectionTitle } from "@/app/(landing)/components/section-title/section-title";
 import { SectionLayout } from "@/app/(landing)/components/section-layout/section-layout";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight } from "lucide-react";
 
 export const PetProjectSection = () => {
   return (
@@ -41,8 +40,8 @@ export const PetProjectSection = () => {
             </div>
           </div>
           <p className="max-w-lg pb-4 text-muted-foreground">
-            Kfeed is a content feed aggregator for artist-related content from
-            Instagram, Twitter, and YouTube. Its intuitive interface and AI
+            Kfeed is a content feed aggregator for K-pop artist-related content
+            from Instagram, Twitter, and YouTube. Its intuitive interface and AI
             chatbot, powered by Vercel AI, help users stay updated on their
             favorite artists, including comebacks, sponsorships and new albums.
           </p>
