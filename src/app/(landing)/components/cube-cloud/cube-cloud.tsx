@@ -13,7 +13,12 @@ type CubeProps = Omit<React.ComponentProps<typeof Instance>, "ref"> & {
 const Cube = ({ spread, ...props }: CubeProps) => {
   const ref = useRef();
 
-  const color = new Color(randFloat(0, 1), randFloat(0, 1), randFloat(0, 1));
+  const color = new Color(
+    randFloat(0.4, 1),
+    randFloat(0.4, 1),
+    randFloat(0.4, 1),
+  );
+  console.log("color", color);
 
   return (
     <Instance
