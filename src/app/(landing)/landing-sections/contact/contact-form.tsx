@@ -87,7 +87,7 @@ export const ContactForm = () => {
               <FormLabel>Message</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Message"
+                  placeholder="What's up?"
                   className="resize-none"
                   {...field}
                 />
