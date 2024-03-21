@@ -14,9 +14,13 @@ import { Button } from "@/components/ui/button";
 
 export const PetProjectSection = () => {
   return (
-    <SectionLayout id="pet-project" aria-labelledby="pet-projects-heading">
+    <SectionLayout
+      id="pet-project"
+      aria-labelledby="pet-projects-heading"
+      className="pr-4 md:pr-0"
+    >
       <SectionTitle id="pet-projects-heading">Pet Project</SectionTitle>
-      <div className="flex flex-col justify-center rounded-lg bg-card/60 backdrop-blur-lg ">
+      <div className="flex flex-col justify-center rounded-lg bg-card/60 backdrop-blur-lg">
         <Image
           src="/images/kfeed-project-hero.png"
           className="rounded-t-lg"
@@ -25,9 +29,9 @@ export const PetProjectSection = () => {
           height={672}
         />
         <div className="pb- flex w-full flex-col items-start px-8 py-8">
-          <div className="flex w-full justify-between pb-2">
+          <div className="flex w-full items-center justify-between pb-2">
             <h3 className="text-5xl font-bold">Kfeed</h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-2">
               <IconBrandTypescript
                 role="presentation"
                 size={42}
@@ -35,8 +39,18 @@ export const PetProjectSection = () => {
               />
               <IconBrandNextjs role="presentation" size={42} stroke={1.25} />
               <IconBrandVercel role="presentation" size={42} stroke={1.25} />
-              <IconSql role="presentation" size={42} stroke={1.25} />
-              <IconBrandOpenai role="presentation" size={42} stroke={1.25} />
+              <IconSql
+                className="hidden md:block"
+                role="presentation"
+                size={42}
+                stroke={1.25}
+              />
+              <IconBrandOpenai
+                className="hidden md:block"
+                role="presentation"
+                size={42}
+                stroke={1.25}
+              />
             </div>
           </div>
           <p className="max-w-lg pb-4 text-muted-foreground">
