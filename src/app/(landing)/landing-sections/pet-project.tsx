@@ -57,7 +57,7 @@ export const PetProjectSection = () => {
             Kfeed is a content feed aggregator for K-pop artist-related content
             from Instagram, Twitter, and YouTube. Its intuitive interface and AI
             chatbot, powered by Vercel AI, help users stay updated on their
-            favorite artists, including comebacks, sponsorships and new albums.
+            favorite artists, including concerts, sponsorships and new albums.
           </p>
           <Button size="lg" asChild>
             <Link href="https://www.kfeed.app" target="_blank">
