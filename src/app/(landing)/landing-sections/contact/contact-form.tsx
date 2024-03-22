@@ -18,7 +18,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 const formSchema = z.object({
   name: z.string().min(2, {
-    message: "Your name must be at least 2 character.",
+    message: "Your name must be at least 2 character",
   }),
   email: z.string().email(),
   message: z

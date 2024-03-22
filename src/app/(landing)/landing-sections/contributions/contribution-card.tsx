@@ -39,7 +39,7 @@ export const ContributionCard = ({ contribution }: ContributionCardProps) => {
           href={`https://github.com/${contribution.githubRepository}`}
         >
           <Github />
-          <span>GitHub</span>
+          <span>GitHub Repository</span>
         </Link>
         <div className="flex space-x-1">
           <Star />
