@@ -53,7 +53,7 @@ export const LetterEffectText = ({
   return (
     <span
       className={cn(
-        "md:letter-effect-text md:hover:letter-effect-text-animate",
+        "letter-effect-text md:hover:letter-effect-text-animate",
         className,
       )}
       {...textAttr}
