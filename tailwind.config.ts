@@ -77,6 +77,12 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      dropShadow: {
+        lightning: [
+          "hsl(var(--accent-colorful)) 0px 0px 3px",
+          "hsl(var(--accent-colorful)) 0px 0px 15px",
+        ],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

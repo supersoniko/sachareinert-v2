@@ -6,7 +6,6 @@ import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import { CubeCloud } from "./cube-cloud";
 import { cn } from "@/lib/utils";
 
-import styles from "./cube-cloud-canvas-wrapper.module.css";
 import { Suspense } from "react";
 
 export function CubeCloudCanvasWrapper({
@@ -17,7 +16,7 @@ export function CubeCloudCanvasWrapper({
   return (
     <div className="grid">
       <Canvas
-        className={cn("-z-40", styles.gridChild)}
+        className={cn("-z-40 col-start-1 col-end-2 row-start-1 row-end-2")}
         gl={{ antialias: false, alpha: false }}
       >
         <Suspense fallback={null}>
@@ -49,7 +48,9 @@ export function CubeCloudCanvasWrapper({
           </EffectComposer>
         </Suspense>
       </Canvas>
-      <div className={styles.gridChild}>{children}</div>
+      <div className={"col-start-1 col-end-2 row-start-1 row-end-2"}>
+        {children}
+      </div>
     </div>
   );
 }

@@ -41,10 +41,6 @@
 }
 
 @layer components {
-    .lightning-text {
-        filter: drop-shadow(hsl(var(--accent-colorful)) 0px 0px 3px) drop-shadow(hsl(var(--accent-colorful)) 0px 0px 15px);
-    }
-
     .letter-effect-text {
         &::before {
             content: attr(text);

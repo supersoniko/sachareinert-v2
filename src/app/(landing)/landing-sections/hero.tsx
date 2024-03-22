@@ -37,7 +37,7 @@ export const HeroSection = () => {
         className="pl-4 pt-4 text-4xl md:max-w-[50vw] md:pl-12 md:text-8xl"
       >
         Developing digital solutions with a focus on{" "}
-        <span className="lightning-text">backend</span>.
+        <span className="drop-shadow-lightning">backend</span>.
       </h1>
       <Card className="border-t-0 md:w-[40vw]">
         <CardContent className="p-0">
