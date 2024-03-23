@@ -72,3 +72,36 @@
     }
 }
 }
+
+@mixin shiny-cube($color1, $color2) {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    z-index: -30;
+    /* border-radius: 50%; */
+    background-color: #fff;
+    box-shadow: 0 0 60px 30px #fff,
+        /* inner white */
+        0 0 100px 60px #f0f,
+        /* middle magenta */
+        0 0 140px 90px #0ff;
+    /* outer cyan */
+    ;
+}
+
+// Apply to specific existing elements
+header::before,
+main::before,
+footer::before {
+    @include shiny-cube(#f0f, #0ff);
+    top: calc(50% - 150px);
+    left: calc(50% - 150px);
+}
+
+// Using Loop to vary positions or other properties slightly (example)
+@each $element, $offset in (header: 0%, main: 50%, footer: 100%) {
+    #{$element}::before {
+        top: calc(#{$offset} - 150px);
+    }
+}

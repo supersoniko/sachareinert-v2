@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint_d \"src/**/*.{ts,tsx}\"",
-    "lint:fix": "eslint_d --fix \"src/**/*.{ts,tsx}\""
+    "lint": "eslint_d \"src/**/*.{ts,tsx,scss}\"",
+    "lint:fix": "eslint_d --fix \"src/**/*.{ts,tsx,scss}\""
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",

@@ -15,7 +15,7 @@ export function CubeCloudCanvasWrapper({
 }) {
   return (
     <div className="grid">
-      <Canvas
+      {/* <Canvas
         className={cn("-z-40 col-start-1 col-end-2 row-start-1 row-end-2")}
         gl={{ antialias: false, alpha: false }}
       >
@@ -47,7 +47,7 @@ export function CubeCloudCanvasWrapper({
             />
           </EffectComposer>
         </Suspense>
-      </Canvas>
+      </Canvas> */}
       <div className={"col-start-1 col-end-2 row-start-1 row-end-2"}>
         {children}
       </div>
