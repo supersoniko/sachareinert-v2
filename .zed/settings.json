@@ -1,4 +1,3 @@
-// Zed settings for Cyclis
 // Install eslint_d globally with `npm install -g eslint_d`
 // Might make this a local node_module if wider adoption of zed is used in project
 {
@@ -30,6 +29,18 @@
           ]
         }
       }
+    },
+    "CSS": {
+      "format_on_save": {
+        "external": {
+          "command": "node_modules/.bin/prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      }
     }
+  },
+
+  "file_types": {
+    "CSS": ["scss"]
   }
 }
